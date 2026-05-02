@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="buoi4/buoi4.csproj" />
   <Project Path="EXEonline/buoi3.csproj" />
 </Solution>
