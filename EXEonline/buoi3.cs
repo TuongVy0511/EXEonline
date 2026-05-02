@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace ExercisesCollection
+namespace buoi3
 {
     class Program
     {
