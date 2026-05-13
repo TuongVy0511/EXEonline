@@ -5,6 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>buoi4.buoi4_6</StartupObject>
   </PropertyGroup>
 
 </Project>
