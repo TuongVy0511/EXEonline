@@ -1,4 +1,13 @@
 <Solution>
-  <Project Path="buoi4/buoi4.csproj" />
-  <Project Path="EXEonline/buoi3.csproj" />
+  <Folder Name="/ss1/" />
+  <Folder Name="/ss2/" />
+  <Folder Name="/ss3/">
+    <Project Path="EXEonline/buoi3.csproj" />
+  </Folder>
+  <Folder Name="/ss4/">
+    <Project Path="buoi4/buoi4.csproj" />
+  </Folder>
+  <Folder Name="/ss5/">
+    <Project Path="buoi5/buoi5.csproj" Id="9c239993-4c17-4880-a9cb-dd9cc83d2a03" />
+  </Folder>
 </Solution>
