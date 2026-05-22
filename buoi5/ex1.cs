@@ -7,7 +7,17 @@ internal class Program
     public static void Main(string[] args)
     {
         Console.OutputEncoding = Encoding.UTF8;
-        int[] array = { 10, 12, 5, 4, 6, 7, 8, 11, 50, 66, 34, 2, 34, 7,8,4,};
+        Console.WriteLine("Nhập số lượng phần tử trong mảng ");
+            int n = int.Parse(Console.ReadLine());
+        int[] array= new int[n];
+        for(int i=0; i<n; i++)
+        {
+            Console.WriteLine($"Nhập giá trị phần tử thứ {i+1}");
+            array[i] = int.Parse(Console.ReadLine());
+        }
+        Console.WriteLine("Mảng là" + string.Join(" ",array));
+        Console.ReadLine();
+        //int[] array = { 10, 12, 5, 4, 6, 7, 8, 11, 50, 66, 34, 2, 34, 7,8,4,};
         //bài1
         double tb = average(array);
         Console.WriteLine($"Giá trị trung trình của array là: {tb}");
