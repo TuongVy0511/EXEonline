@@ -38,8 +38,14 @@ namespace buoi4
                 // Bài 8
                 Console.WriteLine($"Bài 8: Số nguyên âm trong 'Hello World' là = {DemNguyenAm("Hello World")}");
 
-                // Bài 9
-                Console.WriteLine($"Bài 9: Lũy thừa 2 mũ 3 là = {TinhLuyThua(2, 3)}");
+            // Bài 9
+            Console.WriteLine("Nhập cơ số x");
+            int x=int.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập số mũ y");
+            int y=int.Parse(Console.ReadLine()) ;
+
+            double ketqualuythua = TinhLuyThua(x, y);
+                Console.WriteLine($"Bài 9: Lũy thừa với cơ số {x} và số mũ {y} là {ketqualuythua}");
 
                 // Bài 10
                 int[] mangBai10 = { 4, 5, 6, 7 };
@@ -51,9 +57,25 @@ namespace buoi4
                 // Bài 12
                 Console.WriteLine($"Bài 12: 25 độ C chuyển sang độ F là = {CelsiusToFahrenheit(25)}");
 
-                // Bài 13
-                int[] mangBai13 = { 10, 5, 8, 2, 9 };
-                Console.WriteLine($"Bài 13: Phần tử nhỏ nhất trong mảng là = {TimMin(mangBai13)}");
+            // Bài 13
+            Console.WriteLine("Nhập vào số lượng phần tử của mảng");
+            int n = int.Parse(Console.ReadLine());
+            int[] mangngaunhien = new int[n];
+            Random rand =new Random();
+
+            for(int i=0;i<n;i++)
+            {
+                mangngaunhien[i] = rand.Next(1, 101);
+            }
+            Console.WriteLine($"Mảng ngẫu nhiên gồm {n} phần tử là");
+            foreach(int so in mangngaunhien)
+            {
+                Console.Write(so + " ");
+            }
+
+            //tạo biến kết quả
+            int ketquamin = TimMin(mangngaunhien);
+                Console.WriteLine($"Bài 13: Phần tử nhỏ nhất trong {mangngaunhien} là {ketquamin}");
 
                 // Bài 14
                 Console.WriteLine($"Bài 14: Tổng các chữ số của 1234 là = {TongCacChuSo(1234)}");
@@ -157,7 +179,7 @@ namespace buoi4
             static int DemNguyenAm(string s)
             {
                 int count = 0;
-                string nguyenAm = "aeiouAEIOU"; // Tính cả chữ hoa và chữ thường
+                string nguyenAm = "ueoaiUEOAI"; // Tính cả chữ hoa và chữ thường
                 foreach (char c in s)
                 {
                     if (nguyenAm.Contains(c.ToString()))
@@ -212,14 +234,14 @@ namespace buoi4
             }
 
             // Bài 13: Tìm giá trị nhỏ nhất trong mảng
-            static int TimMin(int[] arr)
+            static int TimMin(int[] mangngaunhien)
             {
-                int min = arr[0];
-                for (int i = 1; i < arr.Length; i++)
+                int min = mangngaunhien[0];
+                for (int i = 1; i < mangngaunhien.Length; i++)
                 {
-                    if (arr[i] < min)
+                    if (mangngaunhien[i] < min)
                     {
-                        min = arr[i];
+                        min = mangngaunhien[i];
                     }
                 }
                 return min;

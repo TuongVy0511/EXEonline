@@ -11,6 +11,7 @@ internal class Program
         //bài1
         double tb = average(array);
         Console.WriteLine($"Giá trị trung trình của array là: {tb}");
+        Console.ReadLine();
         //bài2
         Console.WriteLine("Nhập vào 1 số y để kiểm tra");
         int y = int.Parse(Console.ReadLine());
@@ -19,11 +20,13 @@ internal class Program
             Console.WriteLine($"{y} tồn tại trong mảng");
         else
             Console.WriteLine($"{y} không tồn tại trên mảng ");
+        Console.ReadLine();
         //bài3
         Console.WriteLine("Nhập vào 1 số x để kiểm tra");
         int x = int.Parse(Console.ReadLine());
         int check1 = find(array, x);
         Console.WriteLine($"Vị trí của {x} trong mảng là {check1}");
+        Console.ReadLine();
         //bài4
         Console.WriteLine("Nhập vào 1 số xần xóa khỏi mảng");
         int z=int.Parse(Console.ReadLine());
@@ -31,21 +34,33 @@ internal class Program
         if (kiemtratontai(array, z))
 
         {
+            Console.WriteLine($"Mảng sau khi xóa {z} là");
             foreach (int z1 in finalarray)
-            {
-                Console.WriteLine(z1 + " ");
+            { 
+                Console.Write(z1 + " ");
             }
         }
         else { Console.WriteLine($"Số {z} không tồn tại trong mảng"); }
-        
-            //bài5
-            int[] lnnn = findmaxmin(array);
+        Console.WriteLine();
+        Console.ReadLine();
+        //bài5
+        int[] lnnn = findmaxmin(array);
         Console.WriteLine($"Giá trị lớn nhất trong mảng là {lnnn[0]}");
         Console.WriteLine($"Giá trị nhỏ nhất trong mảng là {lnnn[1]}");
+        Console.ReadLine();
         //bài6
         Console.WriteLine($"Mảng sau khi đảo ngược là ");
-        array = daonguoc(array);
-        Console.WriteLine(string.Join(" ",array));
+        int[] array1 = daonguoc(array);
+        Console.WriteLine(string.Join(" ",array1));
+        //bai6.2
+        Console.WriteLine("Mảng sau khi đảo ngược1 là");
+        int[] array2 = daonguoc2(array);
+        Console.WriteLine(string.Join(" ",array2));
+        //bai6.3
+        Array.Reverse(array);
+        Console.WriteLine($"Mảng sau khi đảo ngược 2 ");
+        Console.WriteLine(string.Join(" ", array));
+        Console.ReadLine();
         //bài7
         int[] cacsotrung = timphantutrunglap(array);
         if(cacsotrung.Length==0)
@@ -56,7 +71,8 @@ internal class Program
         {
             Console.WriteLine("các phần tử trùng lặp với nhau là");
             Console.WriteLine(string.Join(" ",cacsotrung));
-        }    
+        }
+        Console.ReadLine();
         //bài7 dùng list
         List<int> cacsotrung1= timphantutrunglap1(array);
         if(cacsotrung1.Count==0)
@@ -68,6 +84,7 @@ internal class Program
             Console.WriteLine("Các phần tử trùng nhau là");
             Console.WriteLine(string.Join(" ",cacsotrung1));
         }
+        Console.ReadLine();
         //bài8
         List<int> mangduynhat = xoaphantutrunglap(array);
         Console.WriteLine("Mảng sau khi đã xóa các phần tử trùng lặp là");
@@ -154,6 +171,14 @@ internal class Program
             mangnguoc[j] = array[i];
             j++;
         }
+        return mangnguoc;
+    }
+    //logic6 dùng hàm đảo ngược của C#
+    static int[] daonguoc2(int[] array)
+    {
+        int[] mangnguoc = new int[array.Length];
+        Array.Copy(array, mangnguoc, array.Length);
+        Array.Reverse(mangnguoc);
         return mangnguoc;
     }
     //logic7
