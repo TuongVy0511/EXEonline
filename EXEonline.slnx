@@ -10,4 +10,7 @@
   <Folder Name="/ss5/">
     <Project Path="buoi5/buoi5.csproj" Id="9c239993-4c17-4880-a9cb-dd9cc83d2a03" />
   </Folder>
+  <Folder Name="/ss6/">
+    <Project Path="buoi6/buoi6.csproj" Id="543419ca-e490-4e8f-b784-c14b619dbd1a" />
+  </Folder>
 </Solution>

@@ -17,18 +17,22 @@ namespace buoi5
             Console.WriteLine(string.Join(" ",dasapxep));
 
             //bài2
-            Console.WriteLine("Nhập vào 1 số bạn muốn tìm trong mảng");
-            int x= int.Parse(Console.ReadLine());
+            Console.WriteLine("Nhập một câu vào để thực hiện");
+            string cau= Console.ReadLine();
 
-            int vitri = timkiem(array, x);
-            if(vitri==-1)
+            Console.WriteLine("Nhập vào 1 từ cần tìm kiếm");
+            string tu = Console.ReadLine();
+            bool ketqua = timkiem(cau, tu);
+            if(ketqua)
             {
-                Console.WriteLine($"số cần tìm không tồn tại trong mảng");
-            }
-            else 
+                Console.WriteLine($"Tìm thấy {tu} trong {cau}");
+            }    
+            else
             {
-                Console.WriteLine($"số cần tìm ở vị trí {vitri}");
+                Console.WriteLine($"Không tìm thấy {tu}trong {cau}");
             }
+            
+           
 
         }
 
@@ -38,7 +42,7 @@ namespace buoi5
             List<int> saukhixep=new List<int>(array);
             for(int i=0;i<saukhixep.Count-1;i++)
             {
-                for(int j=0;j<saukhixep.Count-1;j++)
+                for(int j=0;j<saukhixep.Count-i-1;j++)
                 {
                     if (saukhixep[j] > saukhixep[j+1])
                     {
@@ -52,16 +56,23 @@ namespace buoi5
         }
 
         //logic2
-        static int timkiem(int[] array, int n)
-        {
-            for(int i=0;i <array.Length;i++)
+        static bool timkiem(string cau, string tu)
+        { 
+            if(string.IsNullOrWhiteSpace(cau)||string.IsNullOrWhiteSpace(tu))
+            { return false; }
+
+            int dodaicau = cau.Length;
+            int dodaitu = tu.Length;
+            
+            for(int i=0; i<=dodaicau-dodaitu;i++)
             {
-                if (array[i]==n)
+                string duyetphantu = cau.Substring(i,tu.Length);
+                if (duyetphantu.Equals(tu, StringComparison.OrdinalIgnoreCase)) ;
                 {
-                    return i;
-                }    
-            } 
-            return -1; 
+                    return true;
+                }
+            }
+            return false;
         }
 
     }
