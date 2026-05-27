@@ -56,6 +56,14 @@ namespace buoi6
 
             //TRUNG BÌNH
             //28.Cộng 2 ma trận
+            int dongnew = a.GetLength(0);
+            int cotnew = a.GetLength(1);
+            int[,] b = Mangrandom(dongnew, cotnew);
+            Console.WriteLine("1 ma trận b mới được tạo ra là");
+            inmang(b);
+            int[,] tongmatran = tong2matran(a, b);
+            Console.WriteLine($"Tổng 2 ma trận là");
+            inmang(tongmatran);
 
 
             //29.Tìm ma trận chuyển vị
@@ -263,7 +271,19 @@ namespace buoi6
             }
             return dem;
         }
-        //logic28
+        //logic28 cộng 2 ma trận
+        static int[,] tong2matran(int[,]a, int[,]b)
+        {
+            int[,] c = new int[a.GetLength(0), a.GetLength(1)];
+            for(int i=0;i<a.GetLength(0);i++)
+            { 
+                for(int j=0;j<a.GetLength(1);j++)
+                {
+                    c[i, j] = a[i, j] + b[i, j];
+                }    
+            }
+            return c;
+        }
 
 
         //logic29
@@ -355,7 +375,7 @@ namespace buoi6
             {
                 for(int j=0;j<a.GetLength(1);j++)
                 {
-                    if (j<i||a[i,j]!=0)
+                   if (j<i&&a[i,j]!=0)
                     {
                         return false;
                     }    
@@ -374,7 +394,7 @@ namespace buoi6
             {
                 for (int j = 0; j < a.GetLength(1); j++)
                 {
-                    if (j > i || a[i, j] != 0)
+                    if (j > i && a[i, j] != 0)
                     {
                         return false;
                     }
