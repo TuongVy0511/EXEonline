@@ -5,7 +5,11 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>buoi6.extra_mangrangcua</StartupObject>
+    <StartupObject>buoi6.ex2_baitapmang2</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="ex1.-mang.cs" />
+  </ItemGroup>
 
 </Project>
