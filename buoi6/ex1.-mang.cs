@@ -12,7 +12,7 @@ namespace buoi6
         public static void Main(string[] arg)
         {
             Console.OutputEncoding = Encoding.UTF8;
-            Console.InputEncoding=Encoding.UTF8
+            Console.InputEncoding = Encoding.UTF8;
             //1.Tạo 1 mảng tự nhập
             Console.WriteLine("Nhập số dòng");int n = int.Parse(Console.ReadLine());
             Console.WriteLine("Nhập số cột");int m = int.Parse(Console.ReadLine());

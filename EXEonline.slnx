@@ -1,4 +1,16 @@
 <Solution>
+  <Folder Name="/de1/">
+    <Project Path="giaide1/giaide1.csproj" Id="8a251cc2-da6b-4129-abe5-acccd7695c1d" />
+  </Folder>
+  <Folder Name="/de2/">
+    <Project Path="giaide2/giaide2.csproj" Id="19200ff8-1d36-41de-9ba2-cfbb9dab310e" />
+  </Folder>
+  <Folder Name="/de3/">
+    <Project Path="giaide3/giaide3.csproj" Id="07498847-ab1c-4b2a-a96a-b22f6bd3cb0a" />
+  </Folder>
+  <Folder Name="/move/">
+    <Project Path="di_chuyen/di_chuyen.csproj" Id="89ece3ff-0651-4eab-a434-1b74519a2f1f" />
+  </Folder>
   <Folder Name="/ss1/" />
   <Folder Name="/ss2/" />
   <Folder Name="/ss3/">
@@ -15,5 +27,8 @@
   </Folder>
   <Folder Name="/ss7/">
     <Project Path="buoi7/buoi7.csproj" Id="cfa2b179-cc68-4067-b553-f7b6d5cd4f35" />
+  </Folder>
+  <Folder Name="/ss8/">
+    <Project Path="buoi8/buoi8.csproj" Id="8a0ad25e-995c-45ca-8e0b-648d840ccb1b" />
   </Folder>
 </Solution>
